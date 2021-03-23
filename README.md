@@ -13,14 +13,19 @@ npm install --save vertical-margin
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'vertical-margin'
-import 'vertical-margin/dist/index.css'
+import { Header, Footer } from '../otherComponent'
+
+import { VerticalMargin } from 'vertical-margin'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return (
+	<Header />
+	<VerticalMargin margin={5} />
+	<Footer />
+    )
   }
 }
 ```

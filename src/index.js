@@ -1,6 +1,16 @@
-import React from 'react'
-import styles from './styles.module.css'
+import React from "react";
+import styled from "styled-components";
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+const Margin = styled.span`
+  display: flex;
+  height: ${({ margin }) =>
+    typeof margin === "string" ? margin : `${margin}px`};
+`;
+
+function VerticalMargin(props) {
+
+    return <Margin {...props} />;
+
 }
+
+export { VerticalMargin };
